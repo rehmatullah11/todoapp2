@@ -1,0 +1,54 @@
+<h1>Todos New Page</h1>
+
+
+<% if @todo.errors.any? %>
+  <h4>Error prevented todo from being saved</h4>
+<ul>
+  <% @todo.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+  <% end %>
+</ul>
+<% end %>
+
+
+
+<%= form_for @todo do |f| %>
+<p>
+<%= f.label :name %><br>
+<%= f.text_field :name %>
+</p>
+
+<p>
+<%= f.label :description %><br>
+<%= f.text_area :description %>
+</p>
+
+<p><%= f.submit %></p>
+<% end %>
+
+
+
+<%#= text_area_tag(:message, "Hi, nice site", size: "24x6") %><br>
+<%#= password_field_tag(:password) %><br>
+<%#= hidden_field_tag(:parent_id, "5") %><br>
+<%#= search_field(:user, :name) %><br>
+<%#= telephone_field(:user, :phone) %><br>
+<%#= date_field(:user, :born_on) %><br>
+<%#= datetime_local_field(:user, :graduation_day) %><br>
+<%#= month_field(:user, :birthday_month) %><br>
+<%#= week_field(:user, :birthday_week) %><br>
+<%#= url_field(:user, :homepage) %><br>
+<%#= email_field(:user, :address) %><br>
+<%#= color_field(:user, :favorite_color) %><br>
+<%#= time_field(:task, :started_at) %><br>
+<%#= number_field(:product, :price, in: 1.0..20.0, step: 0.5) %><br>
+<%#= range_field(:product, :discount, in: 1..100) %><br>
+
+
+<%#= form_for @todo, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
+    <%#= f.label :Name %><br>
+    <%#= f.text_field :name%><br>
+    <%#= f.label :Description %><br>
+    <%#= f.text_area :description, size: "60x12" %><br>
+    <%#= f.submit "Create" %>
+  <%# end %>
