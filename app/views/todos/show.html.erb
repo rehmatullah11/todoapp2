@@ -1,9 +1,11 @@
 <h2>Showing Todo Page</h2>
 
 <p>
-name:<%=@todo.name %>
+Name:<%=@todo.name %>
 </p>
 
 <p>
 Description: <%= @todo.description%>
 </p>
+
+<%= link_to "Edit" ,edit_todo_path(@todo) %> | <%= link_to "Back to Index" ,todos_path %> 
